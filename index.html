@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talkington Web and Designs | Caiden Talkington</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to enhance Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f; /* A deep navy blue for a professional look */
+            color: #ccd6f6; /* A light, off-white for text */
+        }
+
+        /* The interactive mouse follower blob */
+        #blob {
+            background: linear-gradient(to right, aquamarine, mediumpurple);
+            height: 300px;
+            width: 300px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: rotate 20s infinite;
+            opacity: 0.3;
+            filter: blur(80px);
+            z-index: -1; /* Place it behind all content */
+        }
+        
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Custom accent color */
+        .text-accent {
+            color: #64ffda; /* A bright, modern mint color */
+        }
+        
+        .bg-accent {
+            background-color: #64ffda;
+        }
+        
+        .border-accent {
+             border-color: #64ffda;
+        }
+        
+        /* Glassmorphism effect for cards */
+        .glass-card {
+            background: rgba(23, 44, 78, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+        }
+        
+        /* Code-like font style */
+        .font-code {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Mouse Follower Blob -->
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+
+        <!-- Header / Navigation -->
+        <header class="flex justify-between items-center mb-24">
+            <a href="#" class="font-code text-accent text-2xl font-bold">CT</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-accent transition-colors duration-300">About</a>
+                <a href="#projects" class="hover:text-accent transition-colors duration-300">Projects</a>
+                <a href="#certs" class="hover:text-accent transition-colors duration-300">Certifications</a>
+                <a href="#contact" class="px-4 py-2 border border-accent rounded-md text-accent hover:bg-accent hover:bg-opacity-10 transition-colors duration-300">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="mb-48">
+                <h1 class="text-lg text-accent font-code mb-4">Hi, my name is</h1>
+                <h2 class="text-5xl md:text-7xl font-black text-slate-200 mb-4">Caiden Talkington.</h2>
+                <h3 class="text-4xl md:text-6xl font-bold text-slate-400 mb-8">I build things for the web.</h3>
+                <p class="max-w-xl">
+                    Through my business, <span class="text-accent">Talkington Web and Designs</span>, I craft impactful online presences for local businesses. I'm currently expanding my skills in Information Technology to build even more robust and scalable solutions.
+                </p>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about" class="mb-32">
+                <h2 class="flex items-center text-3xl font-bold text-slate-200 mb-8">
+                    <span class="font-code text-accent mr-4">01.</span> About Me
+                    <span class="flex-grow h-px bg-slate-700 ml-6"></span>
+                </h2>
+                <div class="grid md:grid-cols-5 gap-10">
+                    <div class="md:col-span-3 text-slate-400 space-y-4">
+                        <p>
+                            As a 17-year-old web developer, I've discovered a genuine passion for crafting impactful online presences for local businesses. With four years of dedicated computer programming education from Columbus Central Middle School and Columbus East High School, I've built a strong foundational understanding of digital logic and problem-solving.
+                        </p>
+                        <p>
+                            My expertise in website creation, primarily leveraging the intuitive power of Wix, is largely self-taught, allowing me to approach each project with a fresh and adaptable perspective.
+                        </p>
+                        <p>
+                            My initial success with "Columbus Outdoor Power" demonstrates my commitment to delivering effective and successful web solutions. I am eager to help more local businesses establish a compelling online presence.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="w-full h-auto p-4 rounded-lg bg-slate-800 font-code text-sm text-slate-400 shadow-lg">
+                           <div class="flex items-center mb-2">
+                               <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                               <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                               <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                           </div>
+                           <p><span class="text-blue-400">const</span> <span class="text-green-400">skills</span> = [</p>
+                           <p class="pl-4">'Web Development',</p>
+                           <p class="pl-4">'UI/UX Design',</p>
+                           <p class="pl-4">'Digital Logic',</p>
+                           <p class="pl-4">'Problem Solving',</p>
+                           <p class="pl-4">'Information Technology'</p>
+                           <p>];<span class="animate-ping">_</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-32">
+                 <h2 class="flex items-center text-3xl font-bold text-slate-200 mb-8">
+                    <span class="font-code text-accent mr-4">02.</span> My Work
+                    <span class="flex-grow h-px bg-slate-700 ml-6"></span>
+                </h2>
+                <div class="glass-card rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-slate-200 mb-2">Columbus Outdoor Power</h3>
+                    <p class="text-slate-400 mb-4">
+                        A clean, modern, and user-friendly website designed to showcase products and services for a local power equipment business, driving customer engagement and online presence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <span class="font-code text-sm text-accent">Wix</span>
+                        <span class="font-code text-sm text-accent">SEO</span>
+                        <span class="font-code text-sm text-accent">UI Design</span>
+                    </div>
+                     <a href="https://www.columbusoutdoorpower.com/" target="_blank" class="inline-block mt-4 text-accent hover:underline">View Project &rarr;</a>
+                </div>
+                <!-- Add more project cards here -->
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certs" class="mb-32">
+                 <h2 class="flex items-center text-3xl font-bold text-slate-200 mb-8">
+                    <span class="font-code text-accent mr-4">03.</span> Certifications
+                    <span class="flex-grow h-px bg-slate-700 ml-6"></span>
+                </h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Certification Card 1 -->
+                    <div class="glass-card group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <img src="https://placehold.co/300x200/0a192f/64ffda?text=1.png" alt="Certification 1" class="mx-auto mb-4 rounded-md border-2 border-transparent group-hover:border-accent transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-slate-200 mb-2">Certification Name One</h3>
+                        <p class="text-slate-400 text-sm">Issued by: Authority Name</p>
+                    </div>
+                    <!-- Certification Card 2 -->
+                    <div class="glass-card group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <img src="https://placehold.co/300x200/0a192f/64ffda?text=2.png" alt="Certification 2" class="mx-auto mb-4 rounded-md border-2 border-transparent group-hover:border-accent transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-slate-200 mb-2">Certification Name Two</h3>
+                        <p class="text-slate-400 text-sm">Issued by: Authority Name</p>
+                    </div>
+                    <!-- Certification Card 3 -->
+                    <div class="glass-card group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <img src="https://placehold.co/300x200/0a192f/64ffda?text=3.png" alt="Certification 3" class="mx-auto mb-4 rounded-md border-2 border-transparent group-hover:border-accent transition-colors duration-300">
+                        <h3 class="text-lg font-bold text-slate-200 mb-2">Certification Name Three</h3>
+                        <p class="text-slate-400 text-sm">Issued by: Authority Name</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="text-center">
+                <h2 class="font-code text-lg text-accent mb-2">04. What’s Next?</h2>
+                <h3 class="text-5xl font-black text-slate-200 mb-4">Get In Touch</h3>
+                <p class="max-w-xl mx-auto mb-8 text-slate-400">
+                    I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, my inbox is always open. I’ll get back to you!
+                </p>
+                <a href="mailto:talkingtonwad@gmail.com" class="inline-block px-8 py-4 border border-accent rounded-md text-accent text-lg hover:bg-accent hover:bg-opacity-10 transition-colors duration-300">
+                    Say Hello
+                </a>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-24">
+            <p class="font-code text-sm text-slate-500">Designed & Built by Caiden Talkington for <span class="text-slate-400">Talkington Web and Designs</span></p>
+        </footer>
+
+    </div>
+
+    <script>
+        // JavaScript for the mouse follower animation
+        const blob = document.getElementById("blob");
+
+        document.body.onpointermove = event => {
+            const { clientX, clientY } = event;
+
+            // Animate the blob to the cursor position
+            blob.animate({
+                left: `${clientX}px`,
+                top: `${clientY}px`
+            }, { duration: 3000, fill: "forwards" });
+        }
+    </script>
+</body>
+</html>
